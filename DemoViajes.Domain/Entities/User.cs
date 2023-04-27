@@ -7,7 +7,7 @@
         public string Password { get; set; }
         public int EmployeeId { get; set; }
         public Employee? Employee { get; set; }
-        public string Sal { get; set; }
+        public string? Sal { get; set; }
 
     }
 }
