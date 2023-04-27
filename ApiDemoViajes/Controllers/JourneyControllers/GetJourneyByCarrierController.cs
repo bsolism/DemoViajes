@@ -11,10 +11,11 @@
             Uow = uow;
         }
         [HttpGet("{id}")]
-        public async Task<IEnumerable<Journey>> GetJourneysByCarrier(int id)
+        public async Task<IEnumerable<Journey>> GetJourneysByCarrierToday(int id)
         {
             var journey = await Uow.JourneyRepository.GetJourneysCarrierToday(id);
             return journey;
         }
+
     }
 }

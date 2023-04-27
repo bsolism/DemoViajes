@@ -6,5 +6,7 @@
         IEmployeeRepository EmployeeRepository { get; }
         ICarrierRepository CarrierRepository { get; }
         IJourneyRepository JourneyRepository { get; }
+        ILoginRepository LoginRepository { get; }
+        IUserRepository UserRepository { get; }
     }
 }

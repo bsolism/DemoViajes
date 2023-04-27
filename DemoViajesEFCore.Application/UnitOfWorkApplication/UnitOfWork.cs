@@ -22,5 +22,11 @@ namespace DemoViajesEFCore.Application.UnitOfWorkApplication
 
         public IJourneyRepository JourneyRepository =>
             new JourneyRepository(Context);
+
+        public ILoginRepository LoginRepository =>
+            new LoginRepository(Context);
+
+        public IUserRepository UserRepository =>
+            new UserRepository(Context);
     }
 }

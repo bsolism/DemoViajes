@@ -76,5 +76,17 @@ namespace DemoViajesEFCore.Application.Repositories
 
             return journeyCarrier;
         }
+        public async Task<IEnumerable<Journey>> GetJourneysByCarrierId(int id)
+        {
+            var journeyCarrier = await Context.Journeys
+                .Include(x => x.Employee)
+                .Include(x => x.Carrier)
+                .Include(x => x.Agency)
+             .Where(x => x.CarrierId == id)
+             .ToListAsync();
+            if (journeyCarrier == default) return null;
+
+            return journeyCarrier;
+        }
     }
 }

@@ -4,6 +4,7 @@ using DemoViajesEFCore.Application.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DemoViajesEFCore.Application.Migrations
 {
     [DbContext(typeof(DemoViajesContext))]
-    partial class DemoViajesContextModelSnapshot : ModelSnapshot
+    [Migration("20230427041851_CreateEntityUser")]
+    partial class CreateEntityUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

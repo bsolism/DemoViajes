@@ -11,6 +11,7 @@ namespace DemoViajesEFCore.Application.DataContext
         public DbSet<Carrier> Carriers { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Journey> Journeys { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

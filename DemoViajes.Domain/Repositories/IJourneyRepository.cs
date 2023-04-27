@@ -7,5 +7,6 @@ namespace DemoViajes.Domain.Repositories
         Task<int> CreateJourney(CreateJourneyDTO journeyDTO);
         Task<IEnumerable<GetJourneysDTO>> GetJourneys();
         Task<IEnumerable<Journey>> GetJourneysCarrierToday(int id);
+        Task<IEnumerable<Journey>> GetJourneysByCarrierId(int id);
     }
 }
